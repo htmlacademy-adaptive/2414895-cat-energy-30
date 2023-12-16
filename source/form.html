@@ -40,31 +40,31 @@
           <form class="product-selection__form form" action="https://echo.htmlacademy.ru">
             <fieldset class="form__fieldset form__fieldset--cat-info">
               <legend class="visually-hidden">Информация о коте</legend>
-              <label class="form__label"> ИМЯ:*
-                <input class="form__input" type="text" value="барсик">
+              <label class="form__label">ИМЯ:*
+                <input class="form__input" type="text" name="cat-name" value="барсик">
               </label>
-              <label class="form__label"> Вес (кг):*
-                <input class="form__input" type="number" value="7">
+              <label class="form__label">Вес (кг):*
+                <input class="form__input" type="number" name="cat-size" value="7">
               </label>
-              <label class="form__label"> Возраст (лет):
-                <input class="form__input" type="number" value="7">
+              <label class="form__label">Возраст (лет):
+                <input class="form__input" type="number" name="cat-age" value="7">
               </label>
             </fieldset>
             <fieldset class="form__fildset form__fildset--target">
               <legend class="visually-hidden">Цель программы</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <label class="form__label"> похудение
+                  <label class="form__label">похудение
                     <input class="form__input"  type="radio" name="target" checked>
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label"> Набор массы
+                  <label class="form__label">Набор массы
                     <input class="form__input"  type="radio" name="target">
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label"> Не знаю (Нужен ваш совет)
+                  <label class="form__label">Не знаю (Нужен ваш совет)
                     <input class="form__input"  type="radio" name="target">
                   </label>
                 </li>
@@ -72,11 +72,11 @@
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--owner-info">
               <legend class="form__title">Контактные данные (владельца кота)</legend>
-              <label class="form__label"> E-mail:*
-                <input class="form__input" type="email" value="кuklachev@gmail.com">
+              <label class="form__label">E-mail:*
+                <input class="form__input" type="email" name="owner-email" value="кuklachev@gmail.com">
               </label>
-              <label class="form__label"> Телефон:*
-                <input class="form__input" type="tel" value="8 (960) 900-60-90">
+              <label class="form__label">Телефон:*
+                <input class="form__input" type="tel" name="owner-phone" value="8 (960) 900-60-90">
               </label>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--comment">
@@ -87,28 +87,28 @@
               <legend class="form__title">Дополнительно</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <label class="form__label"> сахарозаменитель
+                  <label class="form__label">сахарозаменитель
                     <input class="form__input" type="checkbox" name="suggar-free" checked>
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label"> питьевая вода
+                  <label class="form__label">питьевая вода
                     <input class="form__input" type="checkbox" name="clean-water">
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label"> молоко
+                  <label class="form__label">молоко
                     <input class="form__input" type="checkbox" name="milk">
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label"> витамины
+                  <label class="form__label">витамины
                     <input class="form__input" type="checkbox" name="vitamins">
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <button class="form__button button-primary">отправить заявку</button>
+            <button class="form__button button-primary" type="button">отправить заявку</button>
             <small>* — Обязательные поля</small>
           </form>
         </div>
