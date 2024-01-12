@@ -1,0 +1,62 @@
+.example {
+
+}
+
+.example__wrapper {
+
+}
+
+.example__title {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.example__description {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.example__list {
+
+}
+
+.example__item {
+
+}
+
+.example__item-value {
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.example__item-name {
+  color: #444444;
+  text-align: center;
+  font-family: $secondary-font;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+}
+
+.example__item--one-line {
+  span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .example__item-name {
+    color: inherit;
+    font-family: $primary-font;
+    text-transform: uppercase;
+  }
+}
+
+.example__image {
+
+}
+
+.example__switcher {
+
+}
