@@ -8,35 +8,35 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/apple.png">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="/manifest.webmanifest">
     <script src="scripts/form.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="page__header header">
-      <div class="header__wrapper">
-        <a class="header__logo" href="index.ru">
-          <img class="header__logo-image" src="images/logo-image-lg.svg" width="70" height="59" alt="Логотип CAT Energy">
-          <img class="header__logo-name" src="images/logo-name.svg" width="118" height="21" alt="CAT Energy">
+    <header class="main-header">
+      <div class="main-header__wrapper">
+        <a class="main-header__logo" href="index.html">
+          <img class="main-header__logo-image" src="images/logo-image-lg.svg" width="70" height="59" alt="Логотип CAT Energy">
+          <img class="main-header__logo-name" src="images/logo-name.svg" width="118" height="21" alt="CAT Energy">
         </a>
-        <nav class="header__nav nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__item-link" href="index.html">главная</a>
+        <nav class="main-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="index.html">главная</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__item-link" href="catalog.html">Каталог продукции</a>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="nav__item nav__item--active">
-              <a class="nav__item-link" href="form.html" aria-current="page">подбор программы</a>
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__item-link" href="form.html" aria-current="page">подбор программы</a>
             </li>
           </ul>
-          <button class="nav__burger" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
         </nav>
+        <button class="main-header__burger" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </div>
     </header>
-    <main class="page__main main">
+    <main class="main-inner">
       <section class="product-selection">
         <div class="product-selection__wrapper">
           <h1 class="product-selection__title">Подбор программы</h1>
@@ -58,19 +58,16 @@
               <legend class="visually-hidden">Цель программы</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <label class="form__label">похудение
-                    <input class="form__input"  type="radio" name="target" checked>
-                  </label>
+                  <input class="form__input" type="radio" id="weight-loss" name="target" checked>
+                  <label class="form__label" for="weight-loss">похудение</label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">Набор массы
-                    <input class="form__input"  type="radio" name="target">
-                  </label>
+                  <input class="form__input" type="radio" id="weight-gain" name="target">
+                  <label class="form__label" for="weight-gain">Набор массы</label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">Не знаю (Нужен ваш совет)
-                    <input class="form__input"  type="radio" name="target">
-                  </label>
+                  <input class="form__input" type="radio" id="need-advise" name="target">
+                  <label class="form__label" for="need-advise">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
@@ -91,24 +88,20 @@
               <legend class="form__title">Дополнительно</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <label class="form__label">сахарозаменитель
-                    <input class="form__input" type="checkbox" name="suggar-free" checked>
-                  </label>
+                  <input class="form__input" type="checkbox" id="sugar-free" name="suggar-free" checked>
+                  <label class="form__label" for="sugar-free">сахарозаменитель</label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">питьевая вода
-                    <input class="form__input" type="checkbox" name="clean-water">
-                  </label>
+                  <input class="form__input" type="checkbox" id="clean-water" name="clean-water">
+                  <label class="form__label" for="clean-water">питьевая вода</label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">молоко
-                    <input class="form__input" type="checkbox" name="milk">
-                  </label>
+                  <input class="form__input" type="checkbox" id="milk" name="milk">
+                  <label class="form__label" for="milk">молоко</label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">витамины
-                    <input class="form__input" type="checkbox" name="vitamins">
-                  </label>
+                  <input class="form__input" type="checkbox" id="vitamins" name="vitamins">
+                  <label class="form__label" for="vitamins">витамины</label>
                 </li>
               </ul>
             </fieldset>
@@ -127,32 +120,36 @@
         </div>
       </section>
     </main>
-    <footer class="page__footer footer">
-      <div class="footer__wrapper">
-        <a class="footer__logo" href="index.ru">
-          <img class="footer__logo-name" src="images/logo-name.svg" width="128" height="24" alt="CAT Energy">
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <a class="main-footer__logo" href="index.ru">
+          <img class="main-footer__logo-name" src="images/logo-name.svg" width="128" height="24" alt="CAT Energy">
         </a>
-        <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--vkontakte" href="#">
+        <ul class="main-footer__social social">
+          <li class="social__item">
+            <a class="social__link" href="#">
               <span class="visually-hidden">Мы вконтакте</span>
             </a>
           </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--youtube" href="#">
+          <li class="social__item">
+            <a class="social__link" href="#">
               <span class="visually-hidden">Мы в YouTube</span>
             </a>
           </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--telegram" href="#">
+          <li class="social__item">
+            <a class="social__link" href="#">
               <span class="visually-hidden">Мы в Telegram</span>
             </a>
           </li>
         </ul>
-        <a class="footer__logo footer__logo--html-academy" href="htmlacademy.ru">
-          <img class="footer__logo-name" src="images/logo-name-htmlacademy.svg" width="113" height="20" alt="HTML Academy">
-          <img class="footer__logo-name" src="images/logo-image-htmlacademy-lg.svg" width="27" height="34" alt="Логотип HTML Academy">
-        </a>
+        <div class="main-footer__developer developer">
+          <a class="developer__link" href="htmlacademy.ru">
+            <img class="developer__logo developer__logo--text" src="images/logo-name-htmlacademy.svg" width="113" height="20" alt="HTML Academy">
+          </a>
+          <a class="developer__link" href="htmlacademy.ru">
+            <img class="developer__logo developer__logo--icon" src="images/logo-image-htmlacademy-lg.svg" width="27" height="34" alt="Логотип HTML Academy">
+          </a>
+        </div>
       </div>
     </footer>
   </body>

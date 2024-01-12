@@ -1,0 +1,55 @@
+/*.card {
+
+}
+
+.card--more {
+
+}*/
+.card--add {
+  .card__title {
+    line-height: 16px;
+  }
+
+  .card__item {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.card__title {
+  color: #222222;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+/*
+.card__image {
+
+}
+
+.card__list {
+
+}
+*/
+.card__item {
+  color: #444444;
+  text-align: center;
+  font-family: $secondary-font;
+  font-size: 12px;
+  line-height: 16px;
+}
+/*
+.card__item-name {
+
+}
+
+.card__item-value {
+
+}*/
+
+.card__description {
+  color: #444444;
+  text-align: center;
+  font-family: $secondary-font;
+  font-size: 12px;
+  line-height: 16px;
+}
