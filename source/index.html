@@ -15,8 +15,14 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo" href="index.html" aria-current="page">
-          <img class="main-header__logo-image" src="images/logo-image-lg.svg" width="70" height="59" alt="Логотип CAT Energy">
-          <img class="main-header__logo-name" src="images/logo-name.svg" width="118" height="21" alt="CAT Energy">
+          <picture>
+            <source class="main-header__logo-image" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+            <source class="main-header__logo-image" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+            <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
+          </picture>
+        </a>
+        <a class="main-header__logo" href="index.html" aria-current="page">
+          <img class="main-header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
         </a>
         <nav class="main-header__nav main-nav">
           <ul class="main-nav__list main-nav__list--index">
@@ -54,11 +60,13 @@
           <h2 class="visually-hidden">Какие проблемы решает наш корм?</h2>
           <ul class="target__list">
             <li class="target__item">
+              <div class="target__item-icon"></div>
               <h3 class="target__item-title">похудение</h3>
               <p class="target__item-description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="target__link" href="#">каталог slim</a>
             </li>
             <li class="target__item">
+              <div class="target__item-icon"></div>
               <h3 class="target__item-title">набор массы</h3>
               <p class="target__item-description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="target__link" href="#">каталог pro</a>
@@ -69,12 +77,32 @@
       <section class="process">
         <div class="process__wrapper">
           <h2 class="process__title title-h2">Как это работает</h2>
-          <ol class="process__list">
-            <li class="process__item process__item--first">Функциональное питание содержит только полезные питательные вещества.</li>
-            <li class="process__item process__item--second">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-            <li class="process__item process__item--third">Замените один-два приема обычной еды на наше функциональное питание.</li>
-            <li class="process__item process__item--fourth">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
-          </ol>
+          <ul class="process__list">
+            <li class="process__item">
+              <div class="process__item-icon"></div>
+              <p class="process__item-text">
+                Функциональное питание содержит только полезные питательные вещества.
+              </p>
+            </li>
+            <li class="process__item">
+              <div class="process__item-icon"></div>
+              <p class="process__item-text">
+                Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+              </p>
+            </li>
+            <li class="process__item">
+              <div class="process__item-icon"></div>
+              <p class="process__item-text">
+                Замените один-два приема обычной еды на наше функциональное питание.
+              </p>
+            </li>
+            <li class="process__item">
+              <div class="process__item-icon"></div>
+              <p class="process__item-text">
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+              </p>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="example">
@@ -97,12 +125,8 @@
             </li>
           </ul>
           <picture>
-            <source class="example__image" width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index-cat-before@1x.png 1x, images/index-cat-before@2x.png 2x">
-            <img class="example__image" src="images/index-cat-before-mobile@1x.png" srcset="images/index-cat-before-mobile@2x.png 2x" width="280" height="256" alt="Пример результата кота ДО">
-          </picture>
-          <picture>
-            <source class="example__image" width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index-cat-after@1x.png 1x, images/index-cat-after@2x.png 2x">
-            <img class="example__image" src="images/index-cat-after-mobile@1x.png" srcset="images/index-cat-after-mobile@2x.png 2x" width="280" height="256" alt="Пример результата кота ПОСЛЕ">
+            <source class="example__image" width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index-cat-double@1x.png 1x, images/index-cat-double@2x.png 2x">
+            <img class="example__image" src="images/index-cat-double-mobile@1x.png" srcset="images/index-cat-double-mobile@2x.png 2x" width="280" height="256" alt="Пример результата кота ДО-ПОСЛЕ">
           </picture>
           <div class="example__switcher switcher">
             <button class="switcher__button" type="button"><span class="visually-hidden">switcher</span></button>
@@ -121,32 +145,29 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <a class="main-footer__logo" href="index.ru"  aria-current="page">
-          <img class="main-footer__logo-name" src="images/logo-name.svg" width="128" height="24" alt="CAT Energy">
+        <a class="main-footer__logo" href="index.html" aria-current="page">
+          <img class="main-footer__logo-text" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy.">
         </a>
         <ul class="main-footer__social social">
           <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Мы вконтакте</span>
+            <a class="social__link" href="#" aria-label="Мы вконтакте">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Мы в YouTube</span>
+            <a class="social__link" href="#" aria-label="Мы в YouTube">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Мы в Telegram</span>
+            <a class="social__link" href="#" aria-label="Мы в Telegram">
             </a>
           </li>
         </ul>
         <div class="main-footer__developer developer">
           <a class="developer__link" href="htmlacademy.ru">
-            <img class="developer__logo developer__logo--text" src="images/logo-name-htmlacademy.svg" width="113" height="20" alt="HTML Academy">
+            <img class="developer__logo developer__logo--text" src="images/logo-text-htmlacademy.svg" width="113" height="20" alt="HTML Academy.">
           </a>
           <a class="developer__link" href="htmlacademy.ru">
-            <img class="developer__logo developer__logo--icon" src="images/logo-image-htmlacademy-lg.svg" width="27" height="34" alt="Логотип HTML Academy">
+            <img class="developer__logo developer__logo--icon" src="images/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy.">
           </a>
         </div>
       </div>
