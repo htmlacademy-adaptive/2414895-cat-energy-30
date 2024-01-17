@@ -7,19 +7,47 @@
   }
 }
 
-/*.form__fieldset {
+.form__fieldset {
+  &--owner-info {
+    .form__label {
+      position: relative;
+    }
 
+    .form__label--email::after {
+      content: "";
+      top: 31px;
+      left: 337px;
+      position: absolute;
+      mask-image: url("../../images/icons/stack.svg#icon_email");
+      mask-repeat: no-repeat;
+      background-color: $superdark-grey;
+      width: 17px;
+      height: 13px;
+    }
+
+    .form__label--tel::after {
+      content: "";
+      top: 31px;
+      left: 337px;
+      position: absolute;
+      mask-image: url("../../images/icons/stack.svg#icon_phone");
+      mask-repeat: no-repeat;
+      background-color: $superdark-grey;
+      width: 15px;
+      height: 15px;
+    }
+
+    .form__label:hover::after {
+      background-color: $color-accent;
+    }
+  }
 }
-
+/*
 .form__fieldset--cat-info {
 
 }
 
 .form__fildset--target {
-
-}
-
-.form__fieldset--owner-info {
 
 }
 
@@ -48,6 +76,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .form__textarea {

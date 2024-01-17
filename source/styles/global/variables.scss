@@ -1,3 +1,54 @@
 /* здесь используйте глобальные переменные */
-$primary-font: "Oswald", sans-serif;
-$secondary-font: "Lato", sans-serif;
+$primary-font: "Oswald", "Arial", sans-serif;
+$secondary-font: "Lato", "Arial", sans-serif;
+
+$transition: 0.3s ease-in-out;
+
+$black: #000000;
+$light-black: #111111;
+$superdark-grey: #222222;
+$darken-grey: #444444;
+$dark-grey: #666666;
+$semidark-grey: #cdcdcd;
+$grey: #d3d3d3;
+$semilight_grey: #d9d9d9;
+$light_grey: #e7e7e7;
+$lighten-grey: #eaeaea;
+$superlight-grey: #f2f2f2;
+$white: #ffffff;
+$green: #68b738;
+$dark-green: #5eaa2f;
+$light-red: #ff8282;
+
+$color-accent: $green;
+$color-error: $light-red;
+
+$color-bg: $superlight-grey;
+$color-bg-special: $lighten-grey;
+$color-text: $darken-grey;
+$color-text-special: $black;
+$color-text-index: $white;
+$color-burger: $black;
+$color-logo: $light-black;
+$color-btn1: $color-accent;
+$color-btn1-hover: $dark-green;
+$color-btn1-active: $dark-green;
+$color-btn1-text: $white;
+$color-btn2: $superlight-grey;
+$color-btn2-hover: #ebebeb;
+$color-btn2-active: #ebebeb;
+$color-btn2-text: $darken-grey;
+$color-link: $black;
+$color-social: $dark-grey;
+$color-example-border: $semidark-grey;
+$color-label: $darken-grey;
+$color-input: $darken-grey;
+$color-input-border: $light_grey;
+$color-input-border-hover: $semidark-grey;
+$color-input-border-error: $color-error;
+$color-checkbox-border: $semidark-grey;
+$color-radio-border: $semidark-grey;
+$color-checkbox-border-hover: #bababa;
+$color-radio-border-hover: #bababa;
+$color-checkbox-border-active: rgba(#bababa, 0.3);
+$color-radio-border-active: rgba(#bababa, 0.3);

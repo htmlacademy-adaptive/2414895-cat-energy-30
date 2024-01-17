@@ -14,9 +14,15 @@
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__wrapper">
-        <a class="main-header__logo" href="index.html">
-          <img class="main-header__logo-image" src="images/logo-image-lg.svg" width="70" height="59" alt="Логотип CAT Energy">
-          <img class="main-header__logo-name" src="images/logo-name.svg" width="118" height="21" alt="CAT Energy">
+        <a class="main-header__logo" href="index.html" aria-current="page">
+          <picture>
+            <source class="main-header__logo-image" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+            <source class="main-header__logo-image" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+            <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
+          </picture>
+        </a>
+        <a class="main-header__logo" href="index.html" aria-current="page">
+          <img class="main-header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
         </a>
         <nav class="main-header__nav main-nav">
           <ul class="main-nav__list">
@@ -249,9 +255,9 @@
                 <button class="card__button button-primary" type="button">заказать</button>
               </li>
             </ul>
-            <div class="products-add__bonus">
-              <p class="products-add__bonus-despription">Закажите все и получите чехол для кота в подарок!</p>
-            </div>
+          </div>
+          <div class="products-add__bonus">
+            <p class="products-add__bonus-despription">Закажите все и получите чехол для кота в подарок!</p>
           </div>
         </div>
       </section>
@@ -268,31 +274,28 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <a class="main-footer__logo" href="index.ru">
-          <img class="main-footer__logo-name" src="images/logo-name.svg" width="128" height="24" alt="CAT Energy">
+          <img class="main-footer__logo-text" src="images/logo-text.svg" width="128" height="24" alt="CAT Energy.">
         </a>
         <ul class="main-footer__social social">
           <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Мы вконтакте</span>
+            <a class="social__link" href="#" aria-label="Мы вконтакте">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Мы в YouTube</span>
+            <a class="social__link" href="#" aria-label="Мы в YouTube">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Мы в Telegram</span>
+            <a class="social__link" href="#" aria-label="Мы в Telegram">
             </a>
           </li>
         </ul>
         <div class="main-footer__developer developer">
           <a class="developer__link" href="htmlacademy.ru">
-            <img class="developer__logo developer__logo--text" src="images/logo-name-htmlacademy.svg" width="113" height="20" alt="HTML Academy">
+            <img class="developer__logo developer__logo--text" src="images/logo-text-htmlacademy.svg" width="113" height="20" alt="HTML Academy.">
           </a>
           <a class="developer__link" href="htmlacademy.ru">
-            <img class="developer__logo developer__logo--icon" src="images/logo-image-htmlacademy-lg.svg" width="27" height="34" alt="Логотип HTML Academy">
+            <img class="developer__logo developer__logo--icon" src="images/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy.">
           </a>
         </div>
       </div>
