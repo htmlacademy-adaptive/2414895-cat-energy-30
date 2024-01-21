@@ -1,10 +1,15 @@
 .example {
-  background-color: $grey;
+  background-color: $color-bg-special;
 }
-/*
-.example__wrapper {
 
-}*/
+.example__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .example__title {
   font-size: 36px;
@@ -17,10 +22,12 @@
   line-height: 18px;
 }
 
-/*.example__list {
-
+.example__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
+/*
 .example__item {
 
 }*/

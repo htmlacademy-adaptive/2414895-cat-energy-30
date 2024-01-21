@@ -5,12 +5,28 @@
 .target__wrapper {
 
 }
-
-.target__list {
-
-}
 */
+.target__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
 .target__item {
+  background-color: $color-bg;
+
   &:nth-child(1) {
     .target__item-icon::before {
       content: "";
