@@ -1,5 +1,13 @@
 .example {
   background-color: $color-bg-special;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(180deg, $white 50%, $color-bg-special 50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(180deg, $white 25%, $color-bg-special 25%);
+  }
 }
 
 .example__wrapper {
@@ -60,11 +68,7 @@
     text-transform: uppercase;
   }
 }
-
-/*.example__image {
-
-}
-
+/*
 .example__switcher {
 
 }*/
