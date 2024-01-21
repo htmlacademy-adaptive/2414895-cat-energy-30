@@ -1,25 +1,34 @@
 /*.products-add {
 
 }
-
+*/
 .products-add__wrapper {
-
-}*/
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 75% 1fr;
+  }
+}
 
 .products-add__title {
-  text-align: center;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: $desktop-width) {
+    grid-column: -1/1;
+  }
 }
+
 
 /*.products-add__block {
 
 }
-
+*/
 .products-add__list {
-
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
+/*
 .products-add__item {
 
 }*/
@@ -28,16 +37,34 @@
   background-color: rgba($color-accent, 0.85);
   color: $white;
   position: relative;
+  min-height: 290px;
 
   &::before {
     content: "";
-    top: 10px;
-    left: -13px;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
     position: absolute;
     background-image: url("../../images/icons/stack.svg#icon_gift");
     background-repeat: no-repeat;
     width: 80px;
     height: 82px;
+
+    @media (min-width: $tablet-width) {
+      top: 50%;
+      left: 70px;
+      transform: translate(0, -50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 30px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
   }
 }
 

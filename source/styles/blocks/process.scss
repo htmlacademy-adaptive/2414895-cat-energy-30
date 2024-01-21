@@ -2,7 +2,7 @@
 
 }
 
-.process__wrapper {
+.process__wrapper container {
 
 }*/
 
@@ -11,9 +11,24 @@
   line-height: 40px;
 }
 
-/*.process__list {
+.process__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 
-}*/
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 137px 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 77px;
+  }
+}
 
 .process__item {
   &:nth-child(1) {
@@ -44,6 +59,7 @@
 .process__item-icon {
   width: 60px;
   height: 60px;
+  display: inline-block;
   background-color: $color-accent;
   background-repeat: no-repeat;
   background-position: center;

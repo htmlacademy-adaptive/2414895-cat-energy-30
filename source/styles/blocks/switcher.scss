@@ -1,1 +1,58 @@
-/*.switcher {}*/
+.switcher {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.switcher__block {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.switcher__button {
+  width: 40px;
+  height: 256px;
+  position: relative;
+  background-color: transparent;
+  color: $dark-grey;
+  border: none;
+  padding: 0;
+
+  &::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    background-color: $dark-grey;
+  }
+
+  &:hover {
+    color: $color-accent;
+  }
+
+  &:hover::before {
+    background-color: $color-accent;
+  }
+
+  &:active {
+    color: $dark-green;
+  }
+
+  &:active::before {
+    background-color: $dark-green;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 512px;
+  }
+}
+
+.switcher__icon {
+  z-index: 2;
+}

@@ -1,7 +1,10 @@
-/*.social {
-
+.social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
 }
-*/
+
 .social__item {
   &:nth-child(1) {
     .social__link {
@@ -28,13 +31,13 @@
   height: 22px;
   mask-repeat: no-repeat;
   mask-position: center;
-  background-color: $color-social;
+  background-color: $dark-grey;
 
-  :hover {
+  &:hover {
     background-color: $color-accent;
   }
 
-  :active {
+  &:active {
     background-color: rgba($color-accent, 0.3);
   }
 }
