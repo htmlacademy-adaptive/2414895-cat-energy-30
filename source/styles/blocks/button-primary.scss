@@ -4,4 +4,12 @@
   text-transform: uppercase;
   text-align: center;
   border: none;
+
+  &:hover {
+    background-color: $dark-green;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }

@@ -10,7 +10,7 @@
     <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/apple.png">
     <link rel="manifest" href="/manifest.webmanifest">
-    <script src="scripts/catalog.js" defer></script>
+    <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -26,19 +26,19 @@
           <a class="main-header__logo" href="index.html">
             <img class="main-header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
           </a>
-          <button class="main-header__burger" type="button" aria-label="Меню">
-            <span class="main-header__burger-line"></span>
-            <span class="main-header__burger-line"></span>
-            <span class="main-header__burger-line"></span>
+          <button class="main-header__burger burger burger--nojs" type="button" aria-label="Меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
           </button>
        </div>
-        <nav class="main-header__nav main-nav">
+        <nav class="main-header__nav main-nav main-nav--nojs">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__item-link" href="index.html">главная</a>
             </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__item-link" href="catalog.html" aria-current="page">Каталог продукции</a>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link main-nav__item-link--active" href="catalog.html" aria-current="page">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__item-link" href="form.html">подбор программы</a>
@@ -47,7 +47,7 @@
         </nav>
       </div>
     </header>
-    <main class="main-inner">
+    <main class="main-container">
       <section class="products">
         <div class="products__wrapper container">
           <h1 class="products__title">Каталог продукции</h1>
@@ -298,10 +298,11 @@
         <div class="contacts__wrapper container">
           <h2 class="visually-hidden">Контакты</h2>
           <div class="contacts__block">
-            <p class="contacts__text">приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__text">приглашаем<br>к сотрудничеству дилеров!</p>
             <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
           </div>
         </div>
+        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?ll=30.323036%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&z=16.61" frameborder="1" allowfullscreen="true" title="Офис компании по адресу улица Большая Конюшенная дом 19 корпус 8, Санкт-Петербург"></iframe>
       </section>
     </main>
     <footer class="main-footer">
