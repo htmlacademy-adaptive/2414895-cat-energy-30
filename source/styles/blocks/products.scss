@@ -1,13 +1,27 @@
-/*.products {
+.products {
+  margin-bottom: 25px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 76px;
+  }
 }
 
-.products__wrapper{
-
-}*/
 .products__title {
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  margin: 0;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 84px;
+  }
 }
 
 .products__list {
@@ -27,7 +41,3 @@
     gap: 63px 80px;
   }
 }
-/*
-.products__item {
-
-}*/

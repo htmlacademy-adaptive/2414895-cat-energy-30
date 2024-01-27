@@ -3,41 +3,19 @@
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 24px;
 }
 
-.social__item {
-  &:nth-child(1) {
-    .social__link {
-      mask-image: url("../../images/icons/stack.svg#social_vkontakte");
-    }
-  }
-
-  &:nth-child(2) {
-    .social__link {
-      mask-image: url("../../images/icons/stack.svg#social_youtube");
-    }
-  }
-
-  &:nth-child(3) {
-    .social__link {
-      mask-image: url("../../images/icons/stack.svg#social_telegram");
-    }
-  }
-}
-
-.social__link {
-  display: inline-block;
-  width: 28px;
-  height: 22px;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: $dark-grey;
+.social__icon {
+  color: $dark-grey;
 
   &:hover {
-    background-color: $color-accent;
+    color: $color-accent;
   }
 
   &:active {
-    background-color: rgba($color-accent, 0.3);
+    color: rgba($color-accent, 0.3);
   }
 }

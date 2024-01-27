@@ -3,9 +3,10 @@
   background-color: $white;
 
   &--active {
-    position: fixed;
-    top: 66px;
+    position: absolute;
     left: 0;
+    bottom: 0;
+    transform: translateY(100%);
 
     .main-nav__item {
       display: block;

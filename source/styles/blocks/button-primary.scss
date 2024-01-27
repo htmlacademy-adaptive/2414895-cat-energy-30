@@ -3,7 +3,10 @@
   color: $white;
   text-transform: uppercase;
   text-align: center;
+  font-size: 16px;
+  line-height: 20px;
   border: none;
+  padding: 10px;
 
   &:hover {
     background-color: $dark-green;
@@ -11,5 +14,11 @@
 
   &:active {
     color: rgba($white, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 14px;
   }
 }

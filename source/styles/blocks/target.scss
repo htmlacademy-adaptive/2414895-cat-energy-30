@@ -1,11 +1,15 @@
-/*.target {
+.target {
+  margin-bottom: 20px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 71px;
+  }
 }
 
-.target__wrapper {
-
-}
-*/
 .target__list {
   margin: 0;
   padding: 0;
@@ -25,70 +29,161 @@
 }
 
 .target__item {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 20px 22px;
+  align-items: center;
   background-color: $color-bg;
+  padding: 24px 20px 18px;
 
-  &:nth-child(1) {
-    .target__item-icon::before {
-      content: "";
-      top: -2px;
-      left: 8px;
-      position: absolute;
-      background-image: url("../../images/icons/stack.svg#cat-slim");
-      background-repeat: no-repeat;
-      width: 36px;
-      height: 50px;
-    }
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr min-content;
+    gap: 24px 56px;
+    padding: 77px 53px 53px;
   }
 
-  &:nth-child(2) {
-    .target__item-icon::before {
-      content: "";
-      top: 10px;
-      left: -13px;
-      position: absolute;
-      background-image: url("../../images/icons/stack.svg#cat-pro");
-      background-repeat: no-repeat;
-      width: 67px;
-      height: 28px;
-    }
+  @media (min-width: $desktop-width) {
+    grid-template-columns: min-content 1fr;
+    gap: 23px 62px;
+    padding: 47px 52px 55px;
   }
 }
 
-.target__item-icon {
+.target__icon {
   position: relative;
   width: 50px;
   height: 50px;
   background-color: $color-accent;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 200px;
+    grid-column: -1/-2;
+    grid-row: 1/4;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 100px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.target__icon-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    &--catslim {
+      width: 140px;
+      height: 194px;
+    }
+
+    &--catpro {
+      width: 268px;
+      height: 112px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--catslim {
+      width: 70px;
+      height: 97px;
+    }
+
+    &--catpro {
+      width: 134px;
+      height: 56px;
+    }
+  }
 }
 
 .target__item-title {
-  font-size: 36px;
-  line-height: 36px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .target__item-description {
+  margin: 0;
   font-family: $secondary-font;
+  color: $color-text;
+  grid-column: -1/1;
+  position: relative;
+
+  @media (max-width: calc($tablet-width - 1px)) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      width: 100%;
+      height: 1px;
+      background-color: #d9d9d9;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 13px;
+    grid-column: -1/1;
+  }
 }
 
 .target__link {
-  text-align: center;
-  font-size: 20px;
-  line-height: normal;
+  font-size: 16px;
+  line-height: 16px;
   text-transform: uppercase;
+  grid-column: -1/1;
+  width: fit-content;
+  padding-top: 15px;
   position: relative;
 
   &::after {
     content: "";
-    top: 10px;
-    right: -40px;
+    bottom: 15%;
+    right: -47px;
     position: absolute;
     background-image: url("../../images/icons/stack.svg#icon_arrow");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: -8px;
     width: 32px;
     height: 10px;
+    transition: background-position 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    background-position: 0;
+    transition: background-position 0.3s ease-in-out;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 24px;
+    grid-column: 1/2;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    grid-column: -1/1;
   }
 }
-

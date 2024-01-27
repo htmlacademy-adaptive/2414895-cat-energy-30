@@ -1,19 +1,47 @@
-/*.developer {
-
+.developer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .developer__link {
+  color: $dark-grey;
 
+  &--full {
+    display: none;
+  }
+
+  &:hover {
+    .developer__logo {
+      color: $color-accent;
+    }
+  }
+
+  &:focus {
+    .developer__logo {
+      color: $color-accent;
+    }
+  }
+
+  &:active {
+    opacity: 30%;
+
+    .developer__logo {
+      fill: $color-accent;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--name {
+      display: none;
+    }
+
+    &--text {
+      display: none;
+    }
+
+    &--full {
+      display: inline-block;
+    }
+  }
 }
-
-.developer__logo {
-
-}
-
-.developer__logo--text {
-
-}
-
-.developer__logo--icon {
-
-}*/
