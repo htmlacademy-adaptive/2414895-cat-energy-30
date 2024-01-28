@@ -1,20 +1,19 @@
 /* в этот файл добавляет скрипты*/
-let burger = document.querySelector('.burger');
-let menu = document.querySelector('.main-nav');
-let menuLinks = menu.querySelectorAll('.main-nav__item-link');
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.main-nav');
+const menuLinks = menu.querySelectorAll('.main-nav__item-link');
 
 menu.classList.remove('main-nav--nojs');
 burger.classList.remove('burger--nojs');
 
-burger.addEventListener('click',
-function(){
-    burger.classList.toggle('burger--active');
-    menu.classList.toggle('main-nav--active');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('burger--active');
+  menu.classList.toggle('main-nav--active');
 });
 
-menuLinks.forEach(function(el){
-    el.addEventListener('click', function() {
-        burger.classList.remove('burger--active');
-        menu.classList.remove('main-nav--active');
-    });
+menuLinks.forEach((el) => {
+  el.addEventListener('click', () => {
+    burger.classList.remove('burger--active');
+    menu.classList.remove('main-nav--active');
+  });
 });
