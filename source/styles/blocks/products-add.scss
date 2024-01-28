@@ -1,43 +1,108 @@
-/*.products-add {
+.products-add {
+  margin-bottom: 35px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 87px;
+  }
 }
-*/
+
 .products-add__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 75% 1fr;
+    grid-template-columns: 80% 1fr;
   }
 }
 
 .products-add__title {
+  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  margin: 0;
+  margin-bottom: 36px;
+  margin-left: -20px;
+  padding: 0 20px;
+  background-color: $white;
+  width: fit-content;
+  max-width: 85vw;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.5em;
+    right: 0;
+    width: 100vw;
+    height: 2px;
+    background-color: $color-accent;
+    box-shadow: 100vw 0 0 $color-accent;
+    z-index: -1;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+    margin-bottom: 80px;
+    padding: 0 40px;
+    max-width: 60vw;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: -1/1;
+    margin-left: -40px;
+    max-width: 50vw;
   }
 }
 
-
-/*.products-add__block {
-
-}
-*/
 .products-add__list {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-/*
-.products-add__item {
+  margin-bottom: 35px;
+  display: grid;
+  grid-template-columns: 1fr;
 
-}*/
+  @media (min-width: 470px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    margin-bottom: 70px;
+    column-gap: 0;
+  }
+
+  @media (min-width: 950px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
+}
 
 .products-add__bonus {
-  background-color: rgba($color-accent, 0.85);
+  background-color: #959595;
+  background-image: linear-gradient(90deg, $white 0%, $color-accent-light 0%), url("../../images/catalog-present-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
   color: $white;
   position: relative;
   min-height: 290px;
+  height: fit-content;
+  padding: 42px;
+  padding-top: 187px;
 
   &::before {
     content: "";
@@ -64,7 +129,18 @@
   }
 
   @media (min-width: $tablet-width) {
+    background-image: linear-gradient(90deg, $white 0%, $color-accent-light 0%), url("../../images/catalog-present-tablet@1x.jpg");
+    background-position: center;
     min-height: 200px;
+    padding: 71px 125px 69px 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(90deg, $white 0%, $color-accent-light 0%), url("../../images/catalog-present@1x.jpg");
+    min-height: 288px;
+    max-width: 245px;
+    padding: 185px 42px 43px;
+    align-self: center;
   }
 }
 
@@ -72,4 +148,17 @@
   text-align: center;
   font-family: $secondary-font;
   line-height: 20px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: min-content;
+    margin-left: auto;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+  }
 }
