@@ -30,7 +30,8 @@
   margin-left: -20px;
   padding: 0 20px;
   background-color: $white;
-  width: min-content;
+  width: fit-content;
+  max-width: 85vw;
   position: relative;
 
   &::before {
@@ -51,11 +52,13 @@
     margin: 0;
     margin-bottom: 80px;
     padding: 0 40px;
+    max-width: 60vw;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: -1/1;
     margin-left: -40px;
+    max-width: 50vw;
   }
 }
 
@@ -64,24 +67,40 @@
   padding: 0;
   list-style: none;
   margin-bottom: 35px;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 470px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
 
   @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
     margin-bottom: 70px;
+    column-gap: 0;
+  }
+
+  @media (min-width: 950px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
     margin-bottom: 0;
     margin-right: 80px;
   }
 }
 
 .products-add__bonus {
+  background-color: #959595;
   background-image: linear-gradient(90deg, $white 0%, $color-accent-light 0%), url("../../images/catalog-present-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   color: $white;
   position: relative;
   min-height: 290px;
+  height: fit-content;
   padding: 42px;
   padding-top: 187px;
 
@@ -111,6 +130,7 @@
 
   @media (min-width: $tablet-width) {
     background-image: linear-gradient(90deg, $white 0%, $color-accent-light 0%), url("../../images/catalog-present-tablet@1x.jpg");
+    background-position: center;
     min-height: 200px;
     padding: 71px 125px 69px 50%;
   }
@@ -120,6 +140,7 @@
     min-height: 288px;
     max-width: 245px;
     padding: 185px 42px 43px;
+    align-self: center;
   }
 }
 

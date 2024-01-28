@@ -28,15 +28,23 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 470px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
 
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
 
+  @media (min-width: 950px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   @media (min-width: $desktop-width) {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 63px 80px;
   }

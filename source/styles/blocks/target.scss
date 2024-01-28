@@ -150,19 +150,20 @@
   text-transform: uppercase;
   grid-column: -1/1;
   width: fit-content;
+  max-width: 85%;
   padding-top: 15px;
   position: relative;
 
   &::after {
     content: "";
-    bottom: 15%;
+    bottom: 25%;
     right: -47px;
     position: absolute;
     background-image: url("../../images/icons/stack.svg#icon_arrow");
     background-repeat: no-repeat;
-    background-position: -8px;
+    background-position: -8px center;
     width: 32px;
-    height: 10px;
+    height: 12px;
     transition: background-position 0.3s ease-in-out;
   }
 
