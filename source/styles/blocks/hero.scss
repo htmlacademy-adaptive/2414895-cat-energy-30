@@ -1,21 +1,25 @@
 .hero {
   background-color: #4e4d52;
-  background-image: linear-gradient(360deg, $white 45%, $color-accent-light 45%), url("../../images/index-background-mobile@1x.jpg");
+  background-image: linear-gradient(360deg, $white 37%, $color-accent-light 37%), url("../../images/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   color: $white;
-  margin-top: -27px;
   margin-bottom: 20px;
   padding-top: 27px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(360deg, $white 37%, $color-accent-light 37%), url("../../images/index-background-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
     background: transparent;
     color: $black;
     margin: 0;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 82px;
+    margin-bottom: 133px;
 
     &::before {
       content: "";
@@ -31,6 +35,12 @@
       height: 694px;
       z-index: -2;
     }
+
+    @media (min-resolution: 2dppx) {
+      &::before {
+        background-image: linear-gradient(90deg, $white 0%, $color-accent-light 0%), url("../../images/index-background@2x.jpg");
+      }
+    }
   }
 }
 
@@ -42,12 +52,12 @@
   @media (min-width: $tablet-width) {
     align-items: flex-start;
     position: relative;
-    padding: 65px 90px 528px;
+    padding: 0 120px 526px;
   }
 
   @media (min-width: $desktop-width) {
     position: relative;
-    padding: 110px 80px 131px;
+    padding: 92px 190px 130px;
   }
 }
 
@@ -57,11 +67,13 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
     font-size: 60px;
     line-height: 60px;
+    text-align: left;
   }
 
   @media (min-width: $desktop-width) {
@@ -71,7 +83,7 @@
 
 .hero__slogan {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 26px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -103,14 +115,15 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    left: 50%;
+    left: 52%;
     bottom: 0;
     transform: translateX(-50%);
     z-index: -1;
   }
 
   @media (min-width: $desktop-width) {
-    top: 50%;
+    top: 51%;
+    left: 58%;
     transform: translate(-50%, -50%);
     z-index: 0;
   }

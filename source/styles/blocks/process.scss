@@ -1,11 +1,11 @@
 .process {
-  margin-bottom: 49px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 46px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 69px;
   }
 }
@@ -30,11 +30,10 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 37px 137px;
+    gap: 37px 59px;
     counter-reset: process-list;
   }
 
@@ -56,7 +55,7 @@
   gap: 20px;
 
   @media (min-width: $tablet-width) {
-    gap: 31px;
+    gap: 30px 35px;
     padding-top: 40px;
     min-height: 280px;
     position: relative;
@@ -99,5 +98,10 @@
   @media (min-width: $tablet-width) {
     grid-column: -1/1;
     align-self: start;
+    max-width: 80%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 90%;
   }
 }
