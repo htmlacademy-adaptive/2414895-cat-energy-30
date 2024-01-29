@@ -13,7 +13,7 @@
 .contacts__block {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 2px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -21,22 +21,24 @@
   padding-bottom: 26px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 37% 30%;
     padding: 60px 40px;
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: 40% 39%;
     width: 565px;
     position: absolute;
-    top: 50%;
+    top: 48%;
     transform: translateY(-50%);
-    padding: 60px 78px 60px 80px;
+    padding: 63px 78px 57px 80px;
     background-color: $white;
   }
 }
 
 .contacts__text {
   color: $light-black;
+  font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   margin: 0;

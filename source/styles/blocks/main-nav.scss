@@ -52,7 +52,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: flex-end;
-    gap: 33px;
+    gap: 36px;
   }
 
   @media (min-width: $desktop-width) {
@@ -99,9 +99,20 @@
   @media (min-width: $tablet-width) {
     padding-top: 14px;
     padding-bottom: 14px;
+    font-size: 18px;
+    line-height: 24px;
 
     &--active {
       text-decoration: underline $color-accent solid 2px;
+      text-underline-offset: 8px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &--active {
       text-underline-offset: 14px;
     }
   }

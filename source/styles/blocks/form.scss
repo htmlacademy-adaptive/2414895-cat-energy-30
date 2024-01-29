@@ -12,7 +12,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px 80px;
+    gap: 69px 80px;
     margin-bottom: 79px;
     padding: 0;
   }
@@ -62,7 +62,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0.5em;
+    top: 0.6em;
     right: 0;
     width: 100vw;
     height: 2px;
@@ -224,6 +224,10 @@
   grid-template-columns: 1fr;
   gap: 14px;
 
+  @media (min-width: $tablet-width) {
+    gap: 17px;
+  }
+
   @media (min-width: $desktop-width) {
     gap: 20px;
   }
@@ -252,7 +256,7 @@
 
 .form__fieldset--cat-info {
   border: none;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 
   .form__label {
     max-width: 35%;
@@ -275,7 +279,7 @@
 
 .form__fieldset--target {
   padding: 22px 0 19px;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   position: relative;
 
   &::before {
@@ -335,10 +339,10 @@
 }
 
 .form__fieldset--owner-info {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
   .form__title {
-    margin-bottom: 35px;
+    margin-bottom: 33px;
     width: min-content;
 
     @media (min-width: 410px) {
@@ -420,14 +424,13 @@
 
     .form__list {
       grid-template-columns: repeat(2, 1fr);
-      gap: 81px 20px;
+      gap: 20px 80px;
     }
   }
 }
 
-
 .form__fieldset--comment {
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 
   .form__title {
     margin-bottom: 38px;
@@ -442,7 +445,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 59px;
   }
 
   @media (min-width: $desktop-width) {
@@ -451,7 +454,7 @@
 }
 
 .form__fieldset--add-info {
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 
   .form__title {
     margin-bottom: 34px;
@@ -466,7 +469,7 @@
 
     @media (min-width: $tablet-width) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 32px 80px;
+      gap: 32px 60px;
     }
 
     @media (min-width: $desktop-width) {
@@ -481,5 +484,13 @@
     @media (min-width: $tablet-width) {
       gap: 20px;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -12px;
   }
 }
