@@ -1,7 +1,7 @@
 .card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 20px 20px 24px;
+  padding: 21px 20px 23px;
   margin: 0 -20px;
   border-top: 1px solid #ebebeb;
 
@@ -11,8 +11,9 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr;
-    padding: 7px 37px 40px;
-    background-image: linear-gradient(180deg, $white 15%, $color-bg 15%);
+    grid-template-rows: repeat(2, min-content) 1fr min-content;
+    padding: 10px 37px 40px;
+    background-color: $color-bg;
     border: none;
     margin: 0;
   }
@@ -21,73 +22,6 @@
     padding: 10px 38px 40px;
   }
 }
-
-.card--more {
-  grid-template-columns: 1fr;
-  padding-top: 78px;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 30px;
-    background-color: $grey;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 39px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 2px;
-    background-color: $grey;
-  }
-
-  .card__title {
-    width: 90%;
-    color: $light-black;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 8px;
-  }
-
-  @media (min-width: $tablet-width) {
-    background: $white;
-    border: 2px solid $color-bg;
-    height: 85%;
-    align-self: self-end;
-    padding-top: 165px;
-
-    .card__title {
-      margin-bottom: 23px;
-    }
-
-    &::before {
-      top: 50px;
-      height: 60px;
-    }
-
-    &::after {
-      top: 80px;
-      width: 60px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 156px;
-
-    .card__title {
-      margin-bottom: 26px;
-    }
-  }
-}
-
 
 .card__link {
   &--image {
@@ -98,10 +32,11 @@
       grid-row: 1/2;
       grid-column: -1/1;
       margin-bottom: 22px;
+      margin-top: -81px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 7px;
+      margin-bottom: 14px;
     }
   }
 
@@ -148,10 +83,11 @@
 .card__image {
   display: block;
   margin: 0 auto;
+  width: 140px;
+  height: auto;
 
   @media (min-width: $tablet-width) {
-    width: 175px;
-    height: auto;
+    width: 170px;
   }
 }
 
@@ -177,7 +113,7 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
-    padding-bottom: 5px;
+    padding: 2px 0 4px;
     margin-bottom: 5px;
     border-bottom: 1px solid #cdcdcd;
 
@@ -187,6 +123,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 0;
     padding-bottom: 6px;
     margin-bottom: 6px;
   }
@@ -220,5 +157,72 @@
     font-size: 16px;
     line-height: 20px;
     padding: 10px;
+  }
+}
+
+.card--more {
+  grid-template-columns: 1fr;
+  padding-top: 80px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background-color: $grey;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 39px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: $grey;
+  }
+
+  .card__title {
+    width: 90%;
+    color: $light-black;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: min-content 1fr min-content;
+    background: $white;
+    border: 2px solid $color-bg;
+    align-self: self-end;
+    padding-top: 161px;
+    height: 100%;
+
+    .card__title {
+      margin-bottom: 23px;
+    }
+
+    &::before {
+      top: 50px;
+      height: 60px;
+    }
+
+    &::after {
+      top: 80px;
+      width: 60px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 150px;
+
+    .card__title {
+      margin-bottom: 26px;
+    }
   }
 }

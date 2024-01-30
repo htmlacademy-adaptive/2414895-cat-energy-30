@@ -1,7 +1,7 @@
 .card-add {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 11px 0 19px;
+  padding: 12px 0 18px;
   border-bottom: 1px solid #cdcdcd;
 
   &:first-child {
@@ -16,7 +16,13 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
-    padding: 26px 38px 28px;
+    padding: 25px 38px 27px;
+    border: 1px solid #cdcdcd;
+    border-top: none;
+
+    &:first-child {
+      border-top: 1px solid #cdcdcd;
+    }
 
     &:first-child + .card-add {
       border-top: none;
@@ -31,9 +37,11 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(2, 1fr) 27%;
-    padding: 15px 0;
+    padding: 15px 0 16px;
     align-items: center;
     column-gap: 40px;
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
 
     &:first-child + .card-add {
       border-top: none;
@@ -70,10 +78,15 @@
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
     font-size: 16px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 
     .card-add__item-name {
-      margin-right: 55px;
+      margin-right: 50px;
+      margin-top: 4px;
+    }
+
+    .card-add__item-value {
+      margin-right: 3px;
     }
   }
 
