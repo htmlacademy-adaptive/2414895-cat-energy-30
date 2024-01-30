@@ -18,12 +18,18 @@
 
 .social__icon {
   color: $dark-grey;
+}
 
+.social__link {
   &:hover {
-    color: $color-accent;
+    .social__icon {
+      color: $color-accent;
+    }
   }
 
   &:active {
-    color: rgba($color-accent, 0.3);
+    .social__icon {
+      color: rgba($color-accent, 0.3);
+    }
   }
 }

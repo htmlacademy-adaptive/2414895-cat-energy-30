@@ -44,6 +44,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr min-content;
     gap: 33px 62px;
     padding: 50px 52px 55px;
   }
@@ -143,8 +144,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    //padding-top: 13px;
     grid-column: -1/1;
+    align-self: self-start;
   }
 }
 
