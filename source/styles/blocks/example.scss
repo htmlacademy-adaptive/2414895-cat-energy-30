@@ -110,11 +110,19 @@
 
 .example__item {
   text-align: center;
-  padding: 17px;
+  padding: 14px;
   border: 1px solid #cdcdcd;
   border-radius: 2px;
   position: relative;
   max-width: calc(50vw - 36px);
+
+  @media (min-width: $tablet-width) {
+    padding: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
+  }
 }
 
 .example__item-value {
@@ -184,6 +192,7 @@
     text-transform: uppercase;
     padding: 0;
     background-color: transparent;
+    justify-self: end;
   }
 
   .example__item-value {
@@ -213,7 +222,7 @@
     grid-column: -1/1;
     display: grid;
     min-width: 100%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 65% 35%;
     justify-self: center;
     align-items: center;
 
@@ -223,7 +232,7 @@
     }
 
     .example__item-value {
-      text-align: center;
+      text-align: start;
     }
   }
 }

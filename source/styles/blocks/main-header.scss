@@ -6,13 +6,12 @@
   display: flex;
   flex-direction: column;
   padding-top: 11px;
-  padding-bottom: 12px;
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 25px;
+    padding-top: 24px;
     padding-bottom: 25px;
     border-bottom: none;
   }
@@ -26,19 +25,16 @@
 .main-header__first-part {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-start;
-    gap: 13px;
     padding-bottom: 0;
   }
 }
 
 .main-header__logo {
-  &:first-child {
-    margin-right: 56px;
-  }
-
   &:hover {
     opacity: 80%;
   }
@@ -46,20 +42,13 @@
   &:active {
     opacity: 60%;
   }
-
-  @media (min-width: $tablet-width) {
-    &:first-child {
-      margin: 0;
-    }
-  }
 }
 
 .main-header__logo-text {
+  margin-left: -10px;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-.main-header__burger {
-  margin-left: auto;
-}

@@ -34,14 +34,9 @@
   padding-bottom: 16px;
   text-align: center;
   border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
 
   &:first-child {
     border-top: none;
-  }
-
-  &:last-child {
-    border-bottom: none;
   }
 
   @media (min-width: $tablet-width) {
