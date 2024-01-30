@@ -14,13 +14,21 @@
   }
 
   &--nojs {
+    margin: 0 -20px;
+    width: auto;
+
     .main-nav__list {
       position: static;
       min-height: 0;
+      width: 100%;
     }
 
     .main-nav__item {
       display: block;
+
+      &:first-child {
+        border-top: 1px solid #e6e6e6;
+      }
     }
   }
 
@@ -63,7 +71,6 @@
 
       .main-nav__item-link--active {
         text-decoration: underline $white solid 2px;
-        text-underline-offset: 14px;
       }
     }
   }
@@ -72,20 +79,12 @@
 .main-nav__item {
   width: 100%;
   text-align: center;
-  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
   display: none;
-
-  &:last-child {
-    border-bottom: 1px solid #e6e6e6;
-  }
 
   @media (min-width: $tablet-width) {
     width: fit-content;
     border: none;
-
-    &:last-child {
-      border-bottom: none;
-    }
   }
 }
 

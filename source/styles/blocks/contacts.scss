@@ -33,6 +33,7 @@
     transform: translateY(-50%);
     padding: 63px 78px 57px 80px;
     background-color: $white;
+    z-index: 2;
   }
 }
 
@@ -74,15 +75,37 @@
 }
 
 .contacts__map {
-  display: block;
-  border: 1px solid transparent;
   width: 100%;
+  height: 362px;
+  position: relative;
+  background-color: $color-bg;
 
   @media (min-width: $tablet-width) {
     height: 400px;
   }
 }
 
-.contacts__map-image--nojs {
-  display: none;
+.contacts__map-iframe {
+  display: block;
+  border: 1px solid transparent;
+  width: 100%;
+  height: 100%;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.contacts__map-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &--nojs {
+    display: none;
+  }
 }

@@ -2,11 +2,13 @@
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.main-nav');
 const menuLinks = menu.querySelectorAll('.main-nav__item-link');
-const map = document.querySelector('.contacts__map-image');
+const mapImg = document.querySelector('.contacts__map-image');
+const mapIframe = document.querySelector('.contacts__map-iframe');
 
 menu.classList.remove('main-nav--nojs');
 burger.classList.remove('burger--nojs');
-map.classList.remove('contacts__map-image--nojs');
+mapImg.classList.add('contacts__map-image--nojs');
+mapIframe.classList.remove('contacts__map-iframe--nojs');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('burger--active');

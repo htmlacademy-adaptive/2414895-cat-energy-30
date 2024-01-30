@@ -32,7 +32,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: left top;
-      width: calc(50vw - 9px);
+      width: 50%;
       min-width: 720px;
       height: 694px;
       z-index: -2;
@@ -87,7 +87,7 @@
 
 .hero__slogan {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 29px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
