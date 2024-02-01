@@ -115,10 +115,6 @@
     width: 80px;
     height: 82px;
 
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(90deg, $white 0%, $color-accent-light 0%), url("../../images/catalog-present-mobile@2x.jpg");
-    }
-
     @media (min-width: $tablet-width) {
       top: 50%;
       left: 78px;
@@ -130,6 +126,10 @@
       left: 50%;
       transform: translate(-50%, 0);
     }
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(90deg, $white 0%, $color-accent-light 0%), url("../../images/catalog-present-mobile@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
