@@ -5,6 +5,7 @@
   padding: 0;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   &--active {
     .burger__line:nth-child(2) {
